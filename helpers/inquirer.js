@@ -88,8 +88,13 @@ const menuMovies = async ( movies = [] ) => {
      
      const choices = movies.map( ( movie, index ) => ({
           value: movie.id,
-          name: `${`${index + 1}`.green}. ${movie.name}`
+          name: `${`${index + 1}`.green} ${movie.name}`
      }));
+
+     choices.push({
+          value: 0,
+          name: `${'0.'.red} ${'Cancel'.red}`
+     });
 
      const questions = [
           {

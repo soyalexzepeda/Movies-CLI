@@ -48,11 +48,14 @@ const mainMenu = async () => {
                     // Show list a movies
                     const movieIdUpdated = await menuMovies( movies.listArr );
 
-                    // Write a new movie name
-                    const newName = await input();
+                    if ( movieIdUpdated ) {
+                         // Write a new movie name
+                         const newName = await input();
                     
-                    // Update movie list
-                    movies.updateMovie( movieIdUpdated, newName );
+                         // Update movie list
+                         movies.updateMovie( movieIdUpdated, newName );
+                    }
+
                break;
 
                case 5:

@@ -33,7 +33,7 @@ class Movies {
      listComplete() {
           console.log();
           this.listArr.forEach( ( values, index ) => {                    
-               const message = `${`${ index + 1 }`.green}. ${ values.name }`;
+               const message = `${`${ index + 1 }.`.green} ${ values.name }`;
                console.log( message );
           });   
      }
